@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class SellerController {
     
     @Autowired
-    public SellerService service;
+    private SellerService service;
 
     @GetMapping
     public ResponseEntity<List<SellerDTO>> findAll() {

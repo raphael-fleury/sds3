@@ -13,10 +13,10 @@ import org.springframework.stereotype.Service;
 public class SellerService {
     
     @Autowired
-    private SellerRepository sellerRepository;
+    private SellerRepository repository;
 
     public List<SellerDTO> findAll() {
-        var list = sellerRepository.findAll();
+        var list = repository.findAll();
         return list.stream().map(e -> new SellerDTO(e)).collect(Collectors.toList());
     }
 }
